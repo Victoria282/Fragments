@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#35D0FF"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Первый фрагмент"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-black"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/back_edit_text"
+        android:gravity="center_horizontal"
+        android:hint="Имя"
+        android:inputType="text"
+        android:paddingTop="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:paddingTop="10dp"
+        android:id="@+id/userSurname"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@drawable/back_edit_text"
+        android:gravity="center_horizontal"
+        android:hint="Фамилия"
+        android:layout_marginTop="30dp"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:paddingTop="10dp"
+        android:id="@+id/userAge"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@drawable/back_edit_text"
+        android:gravity="center_horizontal"
+        android:hint="Возраст"
+        android:layout_marginTop="30dp"
+        android:inputType="number"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userSurname"
+        tools:ignore="MissingConstraints" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userAge" />
+
+    <Button
+        android:id="@+id/nextFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/first_button"
+        android:text="Отправить"
+        android:textSize="20sp"
+        app:backgroundTint="#00C4FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
