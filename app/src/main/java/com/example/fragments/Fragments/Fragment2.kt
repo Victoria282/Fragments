@@ -18,7 +18,13 @@ class Fragment2 : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_two_layout, container, false)
         val textViewResult : TextView = view.findViewById(R.id.textViewResult)
+        val nextFragment: Button = view.findViewById(R.id.nextFragment)
         val dispMessage: String = arguments?.getString("userInfo").toString()
+
+        nextFragment.setOnClickListener() {
+            activity?.supportFragmentManager?.popBackStack()
+            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.fragmentLayout, Fragment1())?.commit()
+        }
         textViewResult.text = dispMessage
         return view
     }
